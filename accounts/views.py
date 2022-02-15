@@ -9,7 +9,6 @@ def register(request):
     form = NewUserForm(request.POST or None)
     if form.is_valid():
         form.save()
-        profile.save()
         messages.success(request,'User Created Successfully')
         return redirect('Login')
 
