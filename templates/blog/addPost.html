@@ -3,15 +3,18 @@
     Add Post
 {% endblock %}
 {% block content %}
+    <div class = "content">
     <form method = "POST" action = "">
         {%csrf_token%}
             {%for field in form%}
-                <div>
+                <div class = "fields">
                     {{field.label}}
                     {{field}}
-                </div>    
+                </div>
+                <br>    
             {% endfor %}
-        <input type = "submit" value = "Create Post" name="AddPost">
+        <input class = "login-button" type = "submit" value = "Create Post" name="AddPost">
     </form>
     {{form.errors}}
+    </div>
 {% endblock content %}

@@ -4,14 +4,13 @@
     justify-content: space-between;
 }
 
+.login-window{
+    background-color: #f5f5f5 ;
+}
 .post{
-    /* padding: 100px 100px;
-    border-style: solid;
-    border-width: thin;*/
-    /* box-shadow: 2px 2px; */
-    max-width: 960px;
-	margin-right: auto;
-	margin-left: auto;
+    width: 1500px;
+	margin-right: 100px;
+	margin-left: 100px;
     background-color: #fef68a;
     padding: 5rem;
 	min-height: 170px;
@@ -19,6 +18,79 @@
 	flex-direction: column;
 	justify-content: space-between;
 	box-shadow: 5px 5px 5px grey;
-	white-space: pre-wrap;
+	/* white-space: pre-wrap; */
+}
 
+button:hover{
+    cursor: pointer;
+}
+
+.card{
+    width:50vh;
+    height: 50vh;
+    display: flex;
+    margin:auto;
+    margin-top: 25vh;
+    text-align: center;
+    background-color: #f7ba5b   ;
+    box-shadow: 3px 3px 3px gray;
+}
+
+.login-form{
+    margin-top: 10vh;
+}
+
+.register-form{
+    margin-top: 5vh;
+}
+
+.register{
+    padding:10px;
+}
+
+.content{
+    margin-top: 5vh;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-button{
+    width: 150px;
+    height: 30px;
+    background-color: #33ccff ;
+}
+
+.login-button:hover{
+    cursor: pointer;
+}
+
+.login{
+    padding: 10px;
+    width: 40vh;
+}
+
+.fields{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+}
+
+textarea{
+    height: 25vh;
+    width: 50vw;
+    border-radius: 5px;
+}
+
+input{
+    width:50vw;
+    height: 40px;
+    border-radius: 5px;
+}
+
+center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

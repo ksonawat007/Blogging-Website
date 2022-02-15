@@ -6,6 +6,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from blog.models import Post
 
+def home(request):
+    post_list = Post.objects.all()
+    context = {'post_list':post_list}
+    return render(request,'home.html',context)
+
 def register(request):
     if request.user.is_authenticated:
         return redirect('home')

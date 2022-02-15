@@ -1,16 +1,31 @@
-{%extends 'main.html'%}    
-    {%block title%}
-        Login Page
-    {%endblock title%}
-    {%block content%}
-        <form method="POST" action = "">
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+</head>
+<body class="login-window">
+    <div class = 'card'>
+        <form class = "login-form" method="POST" action = "">
             {% csrf_token %}
-            <input type = "text" name = "username" placeholder = "Username...">
-            <input type="password" name="password" placeholder="Password...">
-            <input type="submit" value="Login">
+            <input class="login" type = "text" name = "username" placeholder = "Username..."><br><br>
+            <input class="login" type="password" name="password" placeholder="Password..."><br><br>
+            <input class="login-button" type="submit" value="Login">
         </form>
-        {% for message in messages%}
-            {{message}}
-        {% endfor %}
-        <p>Don't have an account?<a href = "{% url 'Register'%}">Sign up</a></p>
-    {%endblock content%}
+        <div>
+            {% for message in messages%}
+                {{message}}
+            {% endfor %}
+        </div>
+        <br>
+        <p>Don't have an account?<a href = "{% url 'Register'%}"> Sign up</a></p>
+    </div>
+</body>
+</html>
+        
+        
