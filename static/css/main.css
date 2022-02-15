@@ -1,0 +1,24 @@
+.blogs{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post{
+    /* padding: 100px 100px;
+    border-style: solid;
+    border-width: thin;*/
+    /* box-shadow: 2px 2px; */
+    max-width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+    background-color: #fef68a;
+    padding: 5rem;
+	min-height: 170px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 5px 5px 5px grey;
+	white-space: pre-wrap;
+
+}
