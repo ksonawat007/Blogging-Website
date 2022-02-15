@@ -1,10 +1,8 @@
-<html>
-    <head>
-        <title>
-            Register
-        </title>
-    </head>
-    <body>
+{%extends 'accounts/main.html'%}
+    {% block title %}
+    Register
+    {% endblock title%}
+    {%block content%}
         <form method="POST" action="">
             {% csrf_token %}
             {% for field in form%}
@@ -18,6 +16,4 @@
         </form>
         {{form.errors}}
         <p>Already have an account?<br><a href = "{% url 'Login' %}">Login</a></p> 
-    </body>
-
-</html>
+    {%endblock%}

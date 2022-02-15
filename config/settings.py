@@ -80,6 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'BlogUsers',
+        # 'ENFORCE_SCHEMA': False,
     }
 }
 

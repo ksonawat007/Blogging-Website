@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Profile</title>
-</head>
-<body>
+{%extends 'accounts/main.html'%}
+{%block title%}
+        Update Profile
+    {%endblock title%}
+{% block content %}
     <form method="POST" action="">
         {% csrf_token %}
         {% for field in profile%}
             {{field.label}}
             {{field}}<br>
         {%endfor%}
-        
-        <input type="submit" name="Register">
-    </form>
-</body>
-</html>
+{% endblock %}    

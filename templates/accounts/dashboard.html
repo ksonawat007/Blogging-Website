@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    Dashboard page
-    <a href = "{% url 'Logout'%}">Logout</a>
-</body>
-</html>
+{%extends 'accounts/main.html'%}    
+    {%block title%}
+            Dashboard
+    {%endblock%}
+    {%block content%}
+        Dashboard page<a href = "{% url 'AddPost' %}"><button>Add Post</button></a>
+        {%for post in post_list%}
+            <div>{{post}}</div>
+        {% endfor %}
+        <a href = "{% url 'Logout'%}">Logout</a>
+    {%endblock content%}
